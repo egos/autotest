@@ -1,0 +1,13 @@
+apiVersion: "ryax.tech/v1"
+kind: Functions
+spec:
+  id: Autotest
+  human_name: Autotest
+  type: python3
+  version: "1.0"
+  detail: "Autotest"
+  categories:
+  - Processor
+  - Ryax
+  - Developer tools
+  - Default Modules
