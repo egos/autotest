@@ -1,8 +1,8 @@
 apiVersion: "ryax.tech/v1"
 kind: Functions
 spec:
-  id: Autotest
-  human_name: Autotest
+  id: autotest
+  human_name: autotest
   type: python3
   version: "1.0"
   detail: "Autotest"
