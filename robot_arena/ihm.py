@@ -8,7 +8,6 @@ import time
 import pandas as pd
 import streamlit as st
 import numpy as np
-from streamlit.caching import cache
 from model.game import Game
 import run
 from streamlit import caching
@@ -29,7 +28,7 @@ PAS  = 40
 RUN_OK = False
 LAP = 0
 
-@cache(allow_output_mutation=True)
+@st.cache(allow_output_mutation=True)
 def results_load():
     file = "results.csv"
     if os.path.isfile(file) :
@@ -42,7 +41,7 @@ def results_load():
         results = []    
     return results
 
-@cache(allow_output_mutation=True)
+@st.cache(allow_output_mutation=True)
 def open_json(file):
     print ('open_json', file)
     with open(file) as f:
@@ -64,7 +63,7 @@ def array_(data, lap):
     arr[:,::PAS,:]=0
     return arr
 
-@cache
+@st.cache
 def loadimage():
     #img = cv2.imread('victory.png') 
     #img = cv2.resize(img, dsize=(PAS, PAS), interpolation=cv2.INTER_NEAREST)
